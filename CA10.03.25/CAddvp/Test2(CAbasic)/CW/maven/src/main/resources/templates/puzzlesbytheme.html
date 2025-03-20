@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzles by Theme</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  
+</head>
+<body>
+ 
+  <nav class="navbar">
+      <div class="logo">ChessSite</div>
+      <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          
+      </ul>
+  </nav>
+
+  
+  <main>
+    <h1>Puzzles by Theme</h1>
+   
+    <h2 th:text="'Theme: ' + ${param.theme}">Theme: </h2>
+    
+    
+    <div class="puzzle-list">
+      
+      <div th:each="puzzle : ${puzzles}">
+          <div class="puzzle">
+            <h3 th:text="${puzzle.title}">Puzzle Title</h3>
+            
+            <div id="board-" th:attr="id=${'board-' + puzzle.id}" class="puzzle-board" style="width: 400px; margin: 0 auto;"></div>
+          </div>
+      </div>
+      
+     
+      <p th:if="${#lists.isEmpty(puzzles)}">No puzzles found for this theme.</p>
+    </div>
+  </main>
+
+ 
+  <footer>
+    <p>&copy; 2025 ChessSite. All rights reserved.</p>
+  </footer>
+</body>
+</html>

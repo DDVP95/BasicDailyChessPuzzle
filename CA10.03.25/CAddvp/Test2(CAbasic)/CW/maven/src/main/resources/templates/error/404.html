@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Something went wrong!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    .error-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .error-container h1 {
+      color: #c00;
+    }
+    .error-details {
+      background: #f8f8f8;
+      padding: 10px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #007bff;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <h1>Something went wrong!</h1>
+    <p>We are working on this feature or page.</p>
+    
+    <div class="error-details">
+      <p><strong>Timestamp:</strong> <span th:text="${timestamp}">N/A</span></p>
+      <p><strong>Status:</strong> <span th:text="${status}">404</span></p>
+      <p><strong>Error:</strong> <span th:text="${error}">Not Found</span></p>
+      <p><strong>Message:</strong> <span th:text="${message}">No message</span></p>
+      <p><strong>Path:</strong> <span th:text="${path}">/puzzlesbythemes.html</span></p>
+    </div>
+
+    <a class="back-link" href="/">Go back to Home</a>
+  </div>
+</body>
+</html>

@@ -14,55 +14,66 @@ Project Demo:
 ---
 
 Overview  
-The Daily Chess Puzzle App is a Spring Boot web application that allows users to solve daily chess puzzles.  
+The Daily Chess Puzzle App is a Spring Boot web application that lets users solve daily chess puzzles. It uses Google OAuth2 for login, MySQL for persistence, chess.js for move validation, and keeps secrets in a `.env` file.
 
-Main features:  
-- Google OAuth2 Authentication  
-- MySQL database for persistence  
-- Chess validation with chess.js  
-- Secure configurations via `.env`  
-- Spring Security with password salting  
+Main features  
+- Google OAuth2 authentication  
+- MySQL persistence  
+- Move validation with chess.js  
+- Configuration via `.env`  
+- Spring Security with password salting
 
 ---
 
-Getting Started  
+Getting started
 
-Prerequisites (install locally):  
+Prerequisites  
 - Java 17  
 - Maven  
 - MySQL  
-- Git  
+- Git
 
-Clone the repository:  
+Clone the repository
 ```bash
-git clone https://github.com/DDVP95/CA95.git
-cd CA95
-Create a .env file in the root directory:
 
-bash
-Copy
-Edit
+Create a .env file in the project root
 touch .env
-Example .env file:
 
-env
-Copy
-Edit
+Example .env content
+
+git clo##################################
+# Database Configuration
+##################################
 DB_URL=jdbc:mysql://localhost:3306/cadb?useSSL=false&allowPublicKeyRetrieval=true
 DB_USERNAME=your_db_user
 DB_PASSWORD=your_db_password
 
+##################################
+# JPA / Hibernate
+##################################
 JPA_HIBERNATE_DDL_AUTO=update
 JPA_SHOW_SQL=true
 
+##################################
+# Server Configuration
+##################################
 SERVER_PORT=8080
 
+##################################
+# Security - Spring Boot Basic User
+##################################
 SECURITY_USER_NAME=admin
 SECURITY_USER_PASSWORD=your_secure_password
 
+##################################
+# Logging
+##################################
 LOGGING_LEVEL_SPRING=INFO
 LOGGING_LEVEL_CHESSAPP=DEBUG
 
+##################################
+# OAuth2 - Google
+##################################
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 GOOGLE_REDIRECT_URI=http://localhost:8080/login/oauth2/code/google
@@ -72,67 +83,45 @@ GOOGLE_AUTHORIZATION_URI=https://accounts.google.com/o/oauth2/auth
 GOOGLE_TOKEN_URI=https://oauth2.googleapis.com/token
 GOOGLE_USER_INFO_URI=https://www.googleapis.com/oauth2/v3/userinfo
 GOOGLE_USER_NAME_ATTRIBUTE=sub
+
 Database setup
+Start MySQL and create the database.
 
-Start MySQL and create the database:
-
-bash
-Copy
-Edit
 mysql -u root -p
-sql
-Copy
-Edit
 CREATE DATABASE cadb;
-Running the application
 
-bash
-Copy
-Edit
+Run the application
 mvn clean install
 mvn spring-boot:run
-The application will run at:
+
+The application will be available at
 http://localhost:8080
 
-Accessing the app
+Login options
 
-Open the URL in your browser and log in either with Google OAuth2 or with the basic user credentials from .env.
-Once logged in, you can start solving the daily chess puzzles.
+Sign in with Google OAuth2
+
+Or use the basic user credentials from your .env file
 
 Technologies used
-
-Java 17
-
-Spring Boot 3
-
-Spring Security (OAuth2)
-
-Hibernate & JPA
-
-MySQL
-
-Maven
-
-chess.js (move validation)
-
-Bootstrap / TailwindCSS
+Java 17, Spring Boot 3, Spring Security (OAuth2), Hibernate & JPA, MySQL, Maven, chess.js, Bootstrap/TailwindCSS.
 
 What I learned
 
-Google OAuth2 integration with Spring Security
+Google OAuth2 with Spring Security
 
 Managing secrets with environment variables
 
-Database integration with Hibernate and JPA
+JPA/Hibernate with MySQL
 
 Password salting and hashing
 
-Logging and debugging
+Structured logging and debugging
 
-Using chess.js in combination with a backend
+Integrating chess.js with a Spring Boot app
 
 License
-This project is licensed under the MIT License – see the LICENSE file for details.
+This project is licensed under the MIT License (see LICENSE).
 
 Future improvements
 
@@ -140,9 +129,11 @@ Leaderboard system
 
 Puzzle difficulty levels
 
-Better UI with animations
+Improved UI and animations
 
-Allow users to submit their own chess puzzles
+User-submitted chess puzzles
 
 Contact
-For questions or feedback: dominikvalledor2@gmail.com
+dominikvalledor2@gmail.com
+ne https://github.com/DDVP95/CA95.git
+cd CA95

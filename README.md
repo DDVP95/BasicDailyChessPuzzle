@@ -115,7 +115,6 @@ Edit
 mvn clean install
 mvn spring-boot:run
 The application should now run at:
-
 👉 http://localhost:8080
 
 Accessing the App

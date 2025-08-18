@@ -33,6 +33,7 @@ Follow these steps to set up the project locally:
 
 ### 1️⃣ Prerequisites
 Make sure the following are installed:
+
 - Java 17  
 - Maven  
 - MySQL  
@@ -51,7 +52,7 @@ bash
 Copy
 Edit
 touch .env
-Open .env and add your variables:
+Then open .env and add the following variables:
 
 env
 Copy
@@ -123,7 +124,7 @@ The application should now run at:
 6️⃣ Accessing the App
 Open your browser and go to:
 
-arduino
+text
 Copy
 Edit
 http://localhost:8080

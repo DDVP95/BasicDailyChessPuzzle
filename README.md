@@ -8,84 +8,61 @@
 
 ---
 
-## 🎥 Project Demo
+Project Demo:  
 [![Daily Chess Puzzle App Demo](https://img.youtube.com/vi/GOAGZ2NarDc/0.jpg)](https://youtu.be/GOAGZ2NarDc)
 
 ---
 
-## Overview
-The **Daily Chess Puzzle App** is a Spring Boot web application that allows users to solve daily chess puzzles.  
+Overview  
+The Daily Chess Puzzle App is a Spring Boot web application that allows users to solve daily chess puzzles.  
 
-Features:
+Main features:  
 - Google OAuth2 Authentication  
 - MySQL database for persistence  
-- Chess validation with **chess.js**  
+- Chess validation with chess.js  
 - Secure configurations via `.env`  
 - Spring Security with password salting  
 
 ---
 
-## Getting Started
+Getting Started  
 
-### Prerequisites
-Make sure the following are installed:
-
+Prerequisites (install locally):  
 - Java 17  
 - Maven  
 - MySQL  
 - Git  
 
----
-
-### Clone the Repository
+Clone the repository:  
 ```bash
 git clone https://github.com/DDVP95/CA95.git
 cd CA95
-Create a .env File
-Sensitive information is not included in the repo, so create a .env file in the root directory:
+Create a .env file in the root directory:
 
 bash
 Copy
 Edit
 touch .env
-Then open .env and add the following variables:
+Example .env file:
 
 env
 Copy
 Edit
-##################################
-# Database Configuration
-##################################
 DB_URL=jdbc:mysql://localhost:3306/cadb?useSSL=false&allowPublicKeyRetrieval=true
 DB_USERNAME=your_db_user
 DB_PASSWORD=your_db_password
 
-##################################
-# JPA / Hibernate
-##################################
 JPA_HIBERNATE_DDL_AUTO=update
 JPA_SHOW_SQL=true
 
-##################################
-# Server Configuration
-##################################
 SERVER_PORT=8080
 
-##################################
-# Security - Spring Boot Basic User
-##################################
 SECURITY_USER_NAME=admin
 SECURITY_USER_PASSWORD=your_secure_password
 
-##################################
-# Logging
-##################################
 LOGGING_LEVEL_SPRING=INFO
 LOGGING_LEVEL_CHESSAPP=DEBUG
 
-##################################
-# OAuth2 - Google
-##################################
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 GOOGLE_REDIRECT_URI=http://localhost:8080/login/oauth2/code/google
@@ -95,7 +72,8 @@ GOOGLE_AUTHORIZATION_URI=https://accounts.google.com/o/oauth2/auth
 GOOGLE_TOKEN_URI=https://oauth2.googleapis.com/token
 GOOGLE_USER_INFO_URI=https://www.googleapis.com/oauth2/v3/userinfo
 GOOGLE_USER_NAME_ATTRIBUTE=sub
-Configure the Database
+Database setup
+
 Start MySQL and create the database:
 
 bash
@@ -106,33 +84,23 @@ sql
 Copy
 Edit
 CREATE DATABASE cadb;
-Run the Application
-Build and run the app:
+Running the application
 
 bash
 Copy
 Edit
 mvn clean install
 mvn spring-boot:run
-The application should now run at:
-👉 http://localhost:8080
-
-Accessing the App
-Open your browser and go to:
-
-text
-Copy
-Edit
+The application will run at:
 http://localhost:8080
-You can log in via:
 
-Google OAuth2, or
+Accessing the app
 
-the basic user credentials from .env.
+Open the URL in your browser and log in either with Google OAuth2 or with the basic user credentials from .env.
+Once logged in, you can start solving the daily chess puzzles.
 
-Start solving daily chess puzzles! ♟️
+Technologies used
 
-🛠️ Technologies Used
 Java 17
 
 Spring Boot 3
@@ -147,34 +115,34 @@ Maven
 
 chess.js (move validation)
 
-Bootstrap / TailwindCSS (UI)
+Bootstrap / TailwindCSS
 
-📚 What I Learned
-This project covers:
+What I learned
 
-Google OAuth2 with Spring Security
+Google OAuth2 integration with Spring Security
 
-Environment variables for security
+Managing secrets with environment variables
 
-JPA/Hibernate with MySQL
+Database integration with Hibernate and JPA
 
-Password salting & hashing
+Password salting and hashing
 
-Logging & debugging
+Logging and debugging
 
-Integration of chess.js
+Using chess.js in combination with a backend
 
-📜 License
+License
 This project is licensed under the MIT License – see the LICENSE file for details.
 
-🎯 Future Improvements
-✅ Leaderboard system
+Future improvements
 
-✅ Puzzle difficulty levels
+Leaderboard system
 
-✅ Improved UI/animations
+Puzzle difficulty levels
 
-✅ User-submitted chess puzzles
+Better UI with animations
 
-📧 Contact
-For questions: dominikvalledor2@gmail.com
+Allow users to submit their own chess puzzles
+
+Contact
+For questions or feedback: dominikvalledor2@gmail.com

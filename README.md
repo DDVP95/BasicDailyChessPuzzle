@@ -13,7 +13,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 The **Daily Chess Puzzle App** is a Spring Boot web application that allows users to solve daily chess puzzles.  
 
 Features:
@@ -25,13 +25,9 @@ Features:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-Follow these steps to set up the project locally:
-
----
-
-### 1️⃣ Prerequisites
+### Prerequisites
 Make sure the following are installed:
 
 - Java 17  
@@ -41,11 +37,11 @@ Make sure the following are installed:
 
 ---
 
-### 2️⃣ Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/DDVP95/CA95.git
 cd CA95
-3️⃣ Create a .env File
+Create a .env File
 Sensitive information is not included in the repo, so create a .env file in the root directory:
 
 bash
@@ -99,7 +95,7 @@ GOOGLE_AUTHORIZATION_URI=https://accounts.google.com/o/oauth2/auth
 GOOGLE_TOKEN_URI=https://oauth2.googleapis.com/token
 GOOGLE_USER_INFO_URI=https://www.googleapis.com/oauth2/v3/userinfo
 GOOGLE_USER_NAME_ATTRIBUTE=sub
-4️⃣ Configure the Database
+Configure the Database
 Start MySQL and create the database:
 
 bash
@@ -110,7 +106,7 @@ sql
 Copy
 Edit
 CREATE DATABASE cadb;
-5️⃣ Run the Application
+Run the Application
 Build and run the app:
 
 bash
@@ -119,9 +115,10 @@ Edit
 mvn clean install
 mvn spring-boot:run
 The application should now run at:
+
 👉 http://localhost:8080
 
-6️⃣ Accessing the App
+Accessing the App
 Open your browser and go to:
 
 text
